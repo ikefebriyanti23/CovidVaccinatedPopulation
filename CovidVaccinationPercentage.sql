@@ -32,7 +32,7 @@ SELECT location, population, MAX(total_cases) AS highest_infection_count,
 FROM CovidDeaths
 WHERE continent IS NOT NULL
 GROUP BY location, population
-ORDER BY case_percentage DESC;
+ORDER BY percent_population_infected DESC;
 
 /*COUNTRIES WITH THE HIGHEST DEATH COUNT PER POPULATION*/
 SELECT location, MAX(CAST(total_deaths AS integer)) AS total_death_count
